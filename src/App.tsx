@@ -1,21 +1,35 @@
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { useMemo, useState } from "react";
+import * as THREE from "three";
+import SceneRoot from "./scene/SceneRoot";
+import Overlay from "./ui/Overlay";
+
+export type FocusTarget = {
+  id: string;
+  label: string;
+  camPos: THREE.Vector3;
+  lookAt: THREE.Vector3;
+};
 
 export default function App() {
+  const cubeFocus = useMemo<FocusTarget>(
+    () => ({
+      id: "cube",
+      label: "Book (placeholder)",
+      camPos: new THREE.Vector3(0, 0.6, 2.2),
+      lookAt: new THREE.Vector3(0, 0, 0),
+    }),
+    []
+  );
+
+  const [selected, setSelected] = useState<FocusTarget | null>(null);
+
   return (
-    <Canvas
-      camera={{ position: [0, 0, 4], fov: 90 }}
-      style={{ height: "50vh" }}
-    >
-      <ambientLight intensity={1} />
-      <directionalLight position={[5, 5, 5]} intensity={31} />
-
-      <mesh>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial />
-      </mesh>
-
-      <OrbitControls />
-    </Canvas>
+    <div style={{ height: "100%" }}>
+      <SceneRoot selected={selected} onSelect={() => setSelected(cubeFocus)} />
+      <Overlay
+        selectedLabel={selected?.label ?? null}
+        onBack={() => setSelected(null)}
+      />
+    </div>
   );
 }
