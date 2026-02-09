@@ -5,7 +5,7 @@
 
 ### 🤍 Overview
 
-> **Status:**W.I.P.
+> Status: W.I.P.
 ---
 
 ### 🤍 Tech Stack
