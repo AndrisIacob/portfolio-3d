@@ -6,8 +6,6 @@
 ### 🤍 Overview
 
 > **Status:**W.I.P.
-> **Goal:** Bridge the gap between creative 3D assets and functional frontend logic.
-
 ---
 
 ### 🤍 Tech Stack
