@@ -19,8 +19,7 @@ export default function SceneRoot({
       camera={{ position: [0, 0, 4], fov: 50 }}
       style={{ height: "100%" }}
     >
-      <fog attach="fog" args={["#0a0a10", 2.5, 10]} />
-      {/* Background clear color */}
+      <fog attach="fog" args={["#0a0a10", 2.5, 7]} />
       <color attach="background" args={["#050508"]} />
 
       <Atmosphere />
@@ -29,7 +28,6 @@ export default function SceneRoot({
 
       <CameraRig target={selected} />
 
-      {/* Controls are useful while building, but should not fight focus */}
       <OrbitControls enableRotate={!isFocused} enablePan={!isFocused} enableDamping />
     </Canvas>
   );

@@ -14,7 +14,6 @@ export default function CameraRig({ target }: { target: FocusTarget | null }) {
     []
   );
 
-  // Reuse vectors to avoid allocations per frame
   const smoothLook = useMemo(() => new THREE.Vector3(0, 0, 0), []);
 
   useFrame(() => {
