@@ -11,7 +11,7 @@
 ### 🤍 Tech Stack
 * **Core:** [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
 * **3D Engine:** [Three.js](https://threejs.org/) via [React Three Fiber](https://docs.pmnd.rs/react-three-fiber)
-* **Models:**[Blender](https://blender.org)
+* **Models:** [Blender](https://blender.org)
 * **Language:** [TypeScript](https://www.typescriptlang.org/)
 ---
 
