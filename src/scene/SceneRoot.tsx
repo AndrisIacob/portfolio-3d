@@ -16,7 +16,7 @@ export default function SceneRoot({
 
   return (
     <Canvas
-      camera={{ position: [0, 0, 4], fov: 50 }}
+      camera={{ position: [0, 0, 10], fov: 90 }}
       style={{ height: "100%" }}
     >
       <fog attach="fog" args={["#0a0a10", 2.5, 7]} />

@@ -23,9 +23,13 @@ export default function App() {
 
   const [selected, setSelected] = useState<FocusTarget | null>(null);
 
+  const handleToggleFocus = () => {
+    setSelected(selected === null ? cubeFocus : null);
+  };
+
   return (
     <div style={{ height: "100%" }}>
-      <SceneRoot selected={selected} onSelect={() => setSelected(cubeFocus)} />
+      <SceneRoot selected={selected} onSelect={handleToggleFocus} />
       <Overlay
         selectedLabel={selected?.label ?? null}
         onBack={() => setSelected(null)}

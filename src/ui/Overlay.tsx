@@ -12,7 +12,7 @@ export default function Overlay({
         top: 16,
         left: 16,
         padding: 12,
-        background: "rgba(0,0,0,0.6)",
+        background: "rgba(128, 98, 228, 0.13)",
         color: "white",
         borderRadius: 10,
         maxWidth: 320,
